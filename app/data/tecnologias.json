@@ -1,0 +1,38 @@
+[
+  {
+    "title": "React",
+    "image": "react.png",
+    "description": "Biblioteca JavaScript para construir interfaces de usuário.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.png",
+    "description": "Framework React para aplicações web com renderização híbrida.",
+    "rating": 5
+  },
+  {
+    "title": "TypeScript",
+    "image": "typescript.png",
+    "description": "Superset do JavaScript que adiciona tipagem estática opcional.",
+    "rating": 4
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwind.png",
+    "description": "Framework de CSS utilitário para estilização rápida e responsiva.",
+    "rating": 4
+  },
+  {
+    "title": "Node.js",
+    "image": "nodejs.png",
+    "description": "Ambiente de execução JavaScript no servidor.",
+    "rating": 3
+  },
+  {
+    "title": "Python",
+    "image": "python.png",
+    "description": "Linguagem de programação versátil e popular em ciência de dados.",
+    "rating": 4
+  }
+]
