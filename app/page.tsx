@@ -7,8 +7,6 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
 
-      
-      
       <header className="flex flex-col items-center gap-4 py-6">
         <h1 className="text-2xl font-semibold dark:text-white">React & Next.js</h1>
 
