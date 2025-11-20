@@ -1,31 +1,31 @@
 :root {
-  /* Cores principais */
-  --background: #fef6e4;
-  --foreground: #1a1a1a;
-  --primary: #ff6b6b;
-  --secondary: #4ecdc4;
-  --accent: #ffe66d;
-  --muted: #adb5bd;
+  /* Cores principais - tom profissional */
+  --background: #f8f9fa;        /* fundo claro neutro */
+  --foreground: #212529;        /* texto escuro */
+  --primary: #0d6efd;           /* azul profissional */
+  --secondary: #6c757d;         /* cinza médio para textos secundários */
+  --accent: #fd7e14;            /* laranja para destaques sutis */
+  --muted: #adb5bd;             /* cinza claro para elementos menos importantes */
 
   /* Fontes */
-  --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'Fira Code', monospace;
 
-  /* Sombra e bordas */
+  /* Cartões e sombras */
   --card-bg: #ffffff;
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
-    --foreground: #e5e5e5;
-    --primary: #ff6b6b;
-    --secondary: #4ecdc4;
-    --accent: #ffe66d;
+    --foreground: #e9ecef;
+    --primary: #0d6efd;
+    --secondary: #ced4da;
+    --accent: #fd7e14;
     --muted: #6c757d;
 
-    --card-bg: #1f1f1f;
+    --card-bg: #1e1e1e;
     --card-shadow: rgba(0, 0, 0, 0.5);
   }
 }
@@ -37,17 +37,20 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
 }
 
 /* Cabeçalhos */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: var(--primary);
   margin: 16px 0 8px;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 2.5rem;
+  color: var(--primary);
 }
 
 h2 {
@@ -57,12 +60,14 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  color: var(--foreground);
 }
 
-/* Parágrafos e texto */
+/* Parágrafos */
 p {
   margin: 12px 0;
   color: var(--foreground);
+  font-size: 1rem;
 }
 
 /* Listas */
@@ -90,16 +95,17 @@ a:hover {
 button {
   background: var(--primary);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 500;
   transition: all 0.3s;
 }
 
 button:hover {
-  background: var(--secondary);
-  color: var(--foreground);
+  background: var(--accent);
+  color: #fff;
 }
 
 /* Cards e seções */
@@ -110,6 +116,34 @@ section, .card {
   border-radius: 12px;
   margin-bottom: 1.5rem;
   transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Pequenos detalhes profissionais */
+hr {
+  border: none;
+  border-top: 1px solid var(--muted);
+  margin: 2rem 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+pre {
+  background: #e9ecef;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
 
