@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MagiaDoJSX from "@/components/MagiaDoJSX/MagiaDoJSX"; 
+import MagiaDoJSX from "@/components/MagiaDoJSX"; 
 
 
 export default function Home() {
@@ -14,7 +14,8 @@ export default function Home() {
           <Link href="/">Intro</Link>
           <Link href="/sobre">Sobre</Link>
           <Link href="/caracteristicas">Caracteristícas</Link>
-          <Link href="/tecnologias">Tecnologiasn</Link>
+          <Link href="/tecnologias">Tecnologias</Link>
+          <Link href = "/projetos">Projetos</Link>
         </nav>
       </header>
 
