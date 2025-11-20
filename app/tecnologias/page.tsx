@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import tecnologias from "@/app/data/tecnologias.json";
+import TecnologiaCard from "@/components/TecnologiaCard";
 
 // Define a interface do objeto de tecnologia
 interface Tecnologia {
@@ -36,6 +37,17 @@ export default function TecnologiasPage() {
             <p className="text-yellow-500">⭐ {tec.rating}</p>
           </div>
         ))}
+
+        <div className="flex flex-col items-center gap-4 p-6">
+          {data.map(( tec ,index) => (
+            <TecnologiaCard
+            key = {`simple-${index}`}
+            title = {tec.title}
+            image = {`/tecnologias/${tec.image}`}
+            />
+          ))};
+
+           </div>
       </div>
     </section>
   );
