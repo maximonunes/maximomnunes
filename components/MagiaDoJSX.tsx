@@ -1,3 +1,7 @@
+import React from "react";
+import Link from "next/link";
+import "./globals.css"; 
+
 export default function MagiaDoJSX() {
 
     const magia = <strong>HTML dentro de JavaScript!</strong>;

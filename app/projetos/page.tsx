@@ -1,10 +1,8 @@
-
 import React from "react";
 import Link from "next/link";
-
+import "./globals.css"; 
 
 import { DescricaoProjetos } from "@/components/DescricaoProjetos";
-
 
 export default function ProjetosPage() {
   return (
