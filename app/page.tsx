@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MagiaDoJSX from "@/components/MagiaDoJSX"; 
-
+import "./globals.css"; 
 
 export default function Home() {
   return (

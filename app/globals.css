@@ -1,43 +1,71 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores principais */
+  --background: #fef6e4;
+  --foreground: #1a1a1a;
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --accent: #ffe66d;
+  --muted: #adb5bd;
 
-  /* Variáveis de tema */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
-  --font-mono: var(--font-geist-mono, monospace);
+  /* Fontes */
+  --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Sombra e bordas */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --foreground: #e5e5e5;
+    --primary: #ff6b6b;
+    --secondary: #4ecdc4;
+    --accent: #ffe66d;
+    --muted: #6c757d;
 
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
+    --card-bg: #1f1f1f;
+    --card-shadow: rgba(0, 0, 0, 0.5);
   }
 }
 
+/* Reset e corpo */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary);
+  margin: 16px 0 8px;
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 24px;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-weight: bold;
+  font-size: 2rem;
+  color: var(--secondary);
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
+/* Parágrafos e texto */
 p {
   margin: 12px 0;
+  color: var(--foreground);
 }
 
+/* Listas */
 ul {
   list-style: disc;
   margin: 12px 0 0 24px;
@@ -46,5 +74,44 @@ ul {
 li {
   margin-top: 6px;
 }
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Botões */
+button {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+/* Cards e seções */
+section, .card {
+  background: var(--card-bg);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+
 
 
