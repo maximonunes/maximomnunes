@@ -1,18 +1,26 @@
-
 import React from "react";
 import Link from "next/link";
-import "@/app/globals.css"; 
+import Projeto from "./Projeto";
+import "@/app/globals.css";
 
 export function DescricaoProjetos() {
   return (
     <section className="p-4">
       <h2 className="text-2xl font-bold mb-2">Meus Projetos</h2>
 
-      <p className="mb-2">
+      <p className="mb-4">
         Ao longo da minha jornada como desenvolvedor, criei diversos projetos
-        explorando diferentes tecnologias, frameworks e abordagens.  
-        Esta página apresenta apenas uma visão geral — você pode ver todos os meus projetos completos no link abaixo.
+        explorando diferentes tecnologias, frameworks e abordagens. Esta página
+        apresenta apenas uma visão geral — você pode ver todos os meus projetos
+        completos no link abaixo.
       </p>
+
+      {/* Lista de Projetos */}
+      <div className="space-y-4 mb-6">
+        <Projeto nome="Loja Virtual" url="https://seu-site-loja.com" />
+        <Projeto nome="Site com JS Interativo" url="https://seu-site-js.com" />
+        <Projeto nome="Portfólio Antigo" url="https://seu-portfolio-antigo.com" />
+      </div>
 
       <a
         href="/"
@@ -25,3 +33,4 @@ export function DescricaoProjetos() {
     </section>
   );
 }
+

@@ -2,15 +2,16 @@ import React from "react";
 import Link from "next/link";
 import "./globals.css"; 
 
-
-interface TecnologiaCardProps {
+interface TecnologiaCard {
   title: string;
   image: string;
+  index: number; // <-- adicionamos o índice aqui
 }
 
-export default function TecnologiaCard({ title, image }: TecnologiaCardProps) {
+export default function TecnologiaCard({ title, image, index }: TecnologiaCard) {
   return (
-    <div
+    <Link
+      href={`/tecnologias/${index}`} // <-- rota dinâmica
       className="
         w-48 h-56
         bg-gray-800
@@ -29,6 +30,6 @@ export default function TecnologiaCard({ title, image }: TecnologiaCardProps) {
     >
       <img src={image} alt={title} className="w-20 h-20 object-contain" />
       <h3 className="text-center text-lg font-semibold">{title}</h3>
-    </div>
+    </Link>
   );
 }
