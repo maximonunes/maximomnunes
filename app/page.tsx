@@ -10,13 +10,16 @@ export default function Home() {
       <header className="flex flex-col items-center gap-4 py-6">
         <h1 className="text-2xl font-semibold dark:text-white">React & Next.js</h1>
 
-        <nav className="flex gap-4 text-lg">
-          <Link href="/">Intro</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/caracteristicas">Caracteristícas</Link>
-          <Link href="/tecnologias">Tecnologias</Link>
-          <Link href = "/projetos">Projetos</Link>
-        </nav>
+        {/* 
+<nav className="flex gap-4 text-lg">
+  <Link href="/">Intro</Link>
+  <Link href="/sobre">Sobre</Link>
+  <Link href="/caracteristicas">Caracteristícas</Link>
+  <Link href="/tecnologias">Tecnologias</Link>
+  <Link href="/projetos">Projetos</Link>
+</nav>
+*/}
+
       </header>
 
       {/* 👉 Componente inserido aqui */}
