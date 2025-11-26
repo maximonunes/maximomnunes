@@ -1,15 +1,24 @@
-:root {
-  /* Cores principais - tom profissional */
-  --background: #f8f9fa;        /* fundo claro neutro */
-  --foreground: #212529;        /* texto escuro */
-  --primary: #0d6efd;           /* azul profissional */
-  --secondary: #6c757d;         /* cinza médio para textos secundários */
-  --accent: #fd7e14;            /* laranja para destaques sutis */
-  --muted: #adb5bd;             /* cinza claro para elementos menos importantes */
 
-  /* Fontes */
+
+/* ===========================
+   Tema e Variáveis Globais
+   =========================== */
+:root {
+  /* Paleta profissional */
+  --background: #f8f9fa;
+  --foreground: #212529;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --accent: #fd7e14;
+  --muted: #adb5bd;
+
+  /* Tipografia */
   --font-sans: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'Fira Code', monospace;
+
+  /* Layout e estilo */
+  --radius: 12px;
+  --transition: 0.25s ease-in-out;
 
   /* Cartões e sombras */
   --card-bg: #ffffff;
@@ -26,121 +35,127 @@
     --muted: #6c757d;
 
     --card-bg: #1e1e1e;
-    --card-shadow: rgba(0, 0, 0, 0.5);
+    --card-shadow: rgba(0, 0, 0, 0.4);
   }
 }
 
-/* Reset e corpo */
+/* ===========================
+   Reset + Corpo
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
-  margin: 0;
-  padding: 0;
+  padding: 0 1rem;
+  transition: background var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Cabeçalhos */
+/* ===========================
+   Tipografia
+   =========================== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin: 16px 0 8px;
   line-height: 1.2;
+  margin: 1rem 0 0.5rem;
 }
 
+h1 { font-size: 2.5rem; color: var(--primary); }
+h2 { font-size: 2rem;   color: var(--secondary); }
+h3 { font-size: 1.75rem; }
+p  { margin: 0.75rem 0; font-size: 1.05rem; }
 
-nav{
-  margin: 10px 
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.4rem; }
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: var(--primary);
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--secondary);
-}
-
-h3 {
-  font-size: 1.75rem;
-  color: var(--foreground);
-}
-
-/* Parágrafos */
-p {
-  margin: 12px 0;
-  color: var(--foreground);
-  font-size: 1rem;
-}
-
-/* Listas */
-ul {
-  list-style: disc;
-  margin: 12px 0 0 24px;
-}
-
-li {
-  margin-top: 6px;
-}
-
-/* Links */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: var(--accent);
-}
-
-
+/* ===========================
+   Navegação
+   =========================== */
 header nav {
   display: flex;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 header nav a {
-  text-decoration: none;
   color: var(--secondary);
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  transition: background var(--transition), color var(--transition);
 }
 
-header nav a:hover {
-  color: var(--accent);
+header nav a:hover,
+header nav a:focus {
+  background: var(--primary);
+  color: #fff;
 }
 
-/* Botões */
+/* ===========================
+   Links
+   =========================== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition), opacity var(--transition);
+}
+
+a:hover { color: var(--accent); }
+
+/* ===========================
+   Botões
+   =========================== */
 button {
   background: var(--primary);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius);
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: transform var(--transition), background var(--transition);
 }
 
 button:hover {
   background: var(--accent);
-  color: #fff;
+  transform: translateY(-2px);
 }
 
-/* Cards e seções */
-section, .card {
+/* ===========================
+   Cards e Seções
+   =========================== */
+section,
+.card {
   background: var(--card-bg);
-  box-shadow: 0 4px 12px var(--card-shadow);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 16px var(--card-shadow);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
-/* Pequenos detalhes profissionais */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--card-shadow);
+}
+
+/* ===========================
+   Texto e elementos UI
+   =========================== */
+ul { margin-left: 1.5rem; list-style: disc; }
+li { margin-top: 0.4rem; }
+
 hr {
   border: none;
   border-top: 1px solid var(--muted);
@@ -150,24 +165,23 @@ hr {
 blockquote {
   border-left: 4px solid var(--primary);
   padding-left: 1rem;
-  color: var(--secondary);
   font-style: italic;
+  opacity: 0.85;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+  background: #e9ecef;
+  border-radius: 6px;
 }
 
 code {
-  font-family: var(--font-mono);
-  background: #e9ecef;
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
 }
 
 pre {
-  background: #e9ecef;
   padding: 1rem;
-  border-radius: 8px;
   overflow-x: auto;
+  margin: 1rem 0;
 }
-
-
-
-
