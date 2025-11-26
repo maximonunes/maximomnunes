@@ -1,6 +1,7 @@
 "use client"; 
 
 import React, { useState } from "react";
+import '@/app/globals.css'
 
 const caracteristicas = [
   "JSX, sintaxe que mistura HTML e JS.",

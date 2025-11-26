@@ -1,6 +1,8 @@
 import React from "react";
 import tecnologias from "@/app/data/tecnologias.json";
 import TecnologiaCard from "@/components/TecnologiaCard";
+import "@/app/globals.css"; 
+
 
 // Define a interface do objeto de tecnologia
 interface Tecnologia {
