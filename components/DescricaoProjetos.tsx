@@ -17,9 +17,9 @@ export function DescricaoProjetos() {
 
       {/* Lista de Projetos */}
       <div className="space-y-4 mb-6">
-        <Projeto nome="Loja Virtual" url="https://seu-site-loja.com" />
-        <Projeto nome="Site com JS Interativo" url="https://seu-site-js.com" />
-        <Projeto nome="Portfólio Antigo" url="https://seu-portfolio-antigo.com" />
+        <Projeto nome="Loja Virtual" url="https://maximonunes.github.io/maximonunes/lab7/index.html" />
+        <Projeto nome="Site com JS Interativo" url="https://maximonunes.github.io/maximonunes/" />
+        <Projeto nome="Repositório" url="https://github.com/maximonunes/maximomnunes" />
       </div>
 
       <a
