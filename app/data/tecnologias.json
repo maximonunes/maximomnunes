@@ -19,55 +19,55 @@
     },
     {
       "title": "JSON",
-      "image": "/images/json-logo.png",
+      "image": "/tecnologias/json-logo.png",
       "description": "JSON é um formato leve para troca de dados entre sistemas.",
       "rating": 5
     },
     {
       "title": "API RESTful",
-      "image": "/images/api-logo.png",
+      "image": "/tecnologias/nextjs-logo.png",
       "description": "APIs RESTful são utilizadas para comunicação entre sistemas de forma simples e eficiente.",
       "rating": 5
     },
     {
       "title": "Swagger",
-      "image": "/images/swagger-logo.png",
+      "image": "/tecnologias/swagger-logo.png",
       "description": "Swagger é uma ferramenta para documentar APIs RESTful.",
       "rating": 4
     },
     {
       "title": "GitHub",
-      "image": "/images/github-logo.png",
+      "image": "/tecnologias/github-logo.png",
       "description": "GitHub é uma plataforma para hospedagem e versionamento de código-fonte.",
       "rating": 5
     },
     {
       "title": "Codespaces",
-      "image": "/images/codespaces-logo.png",
+      "image": "/tecnologias/codespaces-logo.png",
       "description": "GitHub Codespaces oferece ambientes de desenvolvimento em nuvem.",
       "rating": 4
     },
     {
       "title": "GitHub Pages",
-      "image": "/images/github-pages-logo.png",
+      "image": "/tecnologias/github-pages-logo.png",
       "description": "GitHub Pages permite hospedar sites diretamente de repositórios do GitHub.",
       "rating": 4
     },
     {
       "title": "React.js",
-      "image": "/images/react-logo.png",
+      "image": "/tecnologias/react-logo.png",
       "description": "React.js é uma biblioteca JavaScript para criar interfaces de usuário.",
       "rating": 5
     },
     {
       "title": "Next.js",
-      "image": "/images/nextjs-logo.png",
+      "image": "/tecnologias/nextjs-logo.png",
       "description": "Next.js é um framework React para criação de aplicações web otimizadas.",
       "rating": 5
     },
     {
       "title": "Vercel",
-      "image": "/images/vercel-logo.png",
+      "image": "/tecnologias/vercel-logo.png",
       "description": "Vercel é uma plataforma para deploy de sites e aplicações frontend.",
       "rating": 4
     }
