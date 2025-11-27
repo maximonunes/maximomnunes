@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import tecnologias from "@/app/data/tecnologias.json";
 import TecnologiaDetailsCard from "@/components/TecnologiasDetailsCard";
 import "@/app/globals.css";
