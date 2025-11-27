@@ -1,6 +1,6 @@
 import Link from "next/link";
 import tecnologias from "@/app/data/tecnologias.json";
-import TecnologiaDetailsCard from "@/components/TecnologiaCard";
+import TecnologiaDetailsCard from "@/components/TecnologiasDetailsCard";
 import "@/app/globals.css";
 
 export default function TecnologiaPage({ params }: { params: { tecnologia: string } }) {
@@ -21,8 +21,8 @@ export default function TecnologiaPage({ params }: { params: { tecnologia: strin
       <TecnologiaDetailsCard
         title={tecnologia.title}
         description={tecnologia.description}
-        image={`/tecnologias/${tecnologia.image}`}
         rating={tecnologia.rating}
+        image={`/tecnologias/${tecnologia.image}`}
       />
 
       <Link

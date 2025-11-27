@@ -6,7 +6,7 @@ import "@/app/globals.css";
 interface TecnologiaCard {
   title: string;
   image: string;
-  index: number; // <-- adicionamos o índice aqui
+  index: number; 
 }
 
 export default function TecnologiaCard({ title, image, index }: TecnologiaCard) {
