@@ -1,42 +1,46 @@
 "use client";
 
-import React, { useState } from "react"
+import React, { useState } from "react";
 import "@/app/globals.css";
-import { ICaracteristica } from "@/components/Caracteristica";
 
-// Simulando os dados da mesma forma
-const listaDeCaracteristicas: ICaracteristica[] = [
-  { id: "velocidade", nome: "Velocidade", descricao: "Muito rápido!" },
-  { id: "forca", nome: "Força", descricao: "Extremamente forte!" },
-  { id: "agilidade", nome: "Agilidade", descricao: "Se move com precisão!" },
+const caracteristicas = [
+  "JSX, sintaxe que mistura HTML e JS.",
+  "Componentes, funções que retornam JSX.",
+  "Componentes Reutilizáveis e Modulares.",
+  "Roteamento Automático e APIs.",
+  "Hooks: useState, useEffect e useSWR.",
+  "Renderização Rápida e SEO Friendly.",
+  "TypeScript Seguro e Escalável.",
+  "Comunidade Ativa e Popularidade.",
 ];
 
-interface PageProps {
-  params: {
-    caracteristica: string;
-  };
-}
+export default function CaracteristicasPage() {
+  const [mostrar, setMostrar] = useState(true);
 
-export default function CaracteristicaPage({ params }: PageProps) {
-  const caracteristica = listaDeCaracteristicas.find(
-    (c) => c.id === params.caracteristica
-  );
-
-  if (!caracteristica) {
-    return <p className="text-center mt-20 text-xl">Característica não encontrada.</p>;
+  function handleClick() {
+    setMostrar(!mostrar);
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen text-center gap-4">
-      <h1 className="text-4xl font-bold">{caracteristica.nome}</h1>
-      <p className="text-xl text-gray-600">{caracteristica.descricao}</p>
+    <section className="flex flex-col items-start gap-4">
+      <h2 className="text-2xl font-semibold">
+        Características do React e Next.js
+      </h2>
 
-      <Link
-        href="/caracteristicas"
-        className="px-4 py-2 border rounded-lg hover:bg-gray-100 transition"
+      <button
+        onClick={handleClick}
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
       >
-        Voltar às características
-      </Link>
-    </div>
+        {mostrar ? "Ocultar lista" : "Mostrar lista"}
+      </button>
+
+      {mostrar && (
+        <ul className="list-disc list-inside">
+          {caracteristicas.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </section>
   );
 }
