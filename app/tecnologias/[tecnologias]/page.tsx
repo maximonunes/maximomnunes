@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import tecnologias from "@/app/data/tecnologias.json";
+import tecnologias from "@/data/tecnologias.json";
 import TecnologiaDetailsCard from "@/components/TecnologiasDetailsCard";
 import "@/app/globals.css";
 
