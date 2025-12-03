@@ -1,7 +1,7 @@
 [
     {
       "title": "HTML",
-      "image": "@public/tecnologias/html-logo.png",
+      "image": "@/public/tecnologias/html-logo.png",
       "description": "HTML é a linguagem de marcação para estruturar páginas web.",
       "rating": 5
     },
@@ -13,7 +13,7 @@
     },
     {
       "title": "JavaScript",
-      "image": "@/public/tecnologias/css-logo.png",
+      "image": "@/public/tecnologias/js-logo.png",
       "description": "JavaScript é uma linguagem de programação que torna páginas web interativas.",
       "rating": 4
     },
