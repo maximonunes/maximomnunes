@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import tecnologias from "@/data/tecnologias.json";
 import TecnologiaCard from "@/components/TecnologiaCard";
-import "@/app/globals.css"; 
+
 
 
 // Define a interface do objeto de tecnologia
