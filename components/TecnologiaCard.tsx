@@ -12,7 +12,7 @@ interface TecnologiaCard {
 export default function TecnologiaCard({ title, image, index }: TecnologiaCard) {
   return (
     <Link
-      href={`/tecnologias/${index}`} // <-- rota dinâmica
+      href={`/tecnologias/${index}`}
       className="
         w-48 h-56
         bg-gray-800

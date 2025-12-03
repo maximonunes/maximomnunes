@@ -27,7 +27,7 @@ export default function TecnologiaDetailsCard({
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="text-gray-300">{description}</p>
       <span className="font-semibold">
-        ⭐ Rating: {rating.toFixed(1)} / 5
+        ⭐ Rating: {rating}
       </span>
     </div>
   );
