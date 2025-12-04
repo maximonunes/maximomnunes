@@ -14,13 +14,13 @@ interface Tecnologia {
 }
 
 export default function TecnologiasPage() {
-  const data: Tecnologia[] = JSON.parse(JSON.stringify(tecnologias));
+  const data = tecnologias;
 
   return (
     <section className="flex flex-col items-center gap-8">
       <h2 className="text-3xl font-semibold">Tecnologias Exploradas</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl">
         {data.map((tec: Tecnologia, index: number) => (
           <TecnologiaCard
             key={index}
