@@ -17,7 +17,11 @@ export default function TecnologiaPage() {
         title={tecnologias[index].title}
         description={tecnologias[index].description}
         rating={tecnologias[index].rating}
-        image={tecnologias[index].image}
+        <img 
+        src={tecnologias[index].image}
+        alt={tecnologias[index].title}
+        className="w-[80px] h-auto object-contain"
+      />
       
 
       <Link
