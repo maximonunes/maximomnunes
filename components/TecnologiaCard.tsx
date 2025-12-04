@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link"; 
 import "@/app/globals.css"; 
-
+import Image from 'next/image';
 
 interface TecnologiaCard {
   title: string;
@@ -29,7 +29,7 @@ export default function TecnologiaCard({ title, image, index }: TecnologiaCard) 
         m-3
       "
     >
-      <img src={image} alt={title} className="w-20 h-20 object-contain" />
+      <img src={image} alt={title} className="w-[100px] h-auto object-contain"/>
       <h3 className="text-center text-lg font-semibold">{title}</h3>
     </Link>
   );

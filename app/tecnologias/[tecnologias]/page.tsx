@@ -9,15 +9,8 @@ export default function TecnologiaPage() {
   const params = useParams()
   const index = Number(params.tecnologia)
 
-  if (isNaN(index) || index < 0 || index >= tecnologias.length) {
-    return (
-      <div className="flex justify-center items-center h-screen text-xl text-red-500">
-        Tecnologia não encontrada.
-      </div>
-    );
-  }
-
   
+
   return (
     <>
     <div className="flex flex-col justify-center items-center h-screen text-center gap-6 p-6">

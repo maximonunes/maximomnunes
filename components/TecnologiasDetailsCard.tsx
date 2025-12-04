@@ -23,7 +23,13 @@ export default function TecnologiaDetailsCard({
         max-w-md w-full
       "
     >
-      <img src={image} alt={title} className="w-32 h-32 object-contain" />
+      
+      <img 
+      src={image} 
+      alt={title} 
+      className="w-[80px] h-auto object-contain" 
+      />
+
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="text-gray-300">{description}</p>
       <span className="font-semibold">
