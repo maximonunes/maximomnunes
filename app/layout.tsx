@@ -26,7 +26,7 @@ export default function RootLayout({
   const data = new Date();
 
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className="flex flex-col justify-start gap-4 p-20 items-center min-h-screen">
         <header className="flex flex-col items-center">
           <h1>React & Next.js</h1>
@@ -42,10 +42,9 @@ export default function RootLayout({
         <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
           {children}
         </main>
-
-        <footer>DIW {data.getFullYear()}</footer>
       </body>
-    </html>
+      </html>
+    
   );
 }
 
