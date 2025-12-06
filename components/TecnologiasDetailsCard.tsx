@@ -27,7 +27,7 @@ export default function TecnologiaDetailsCard({
       <img 
       src={image} 
       alt={title} 
-      className="w-[80px] h-auto object-contain" 
+      className="w-20 h-auto object-contain" 
       />
 
       <h2 className="text-2xl font-bold">{title}</h2>

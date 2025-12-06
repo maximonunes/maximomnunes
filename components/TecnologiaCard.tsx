@@ -3,9 +3,10 @@ import ContadorPorTecnologia from "@/components//ContadorTec";
 interface TecnologiaProps {
     title: string;
     image: string;
+
 }
 
-export default function TecnologiaCard({ title, image}: TecnologiaProps) {
+export default function TecnologiaCard({ title, image }: TecnologiaProps) {
 
     return (
             <div className="w-44 h-44 bg-pink-700 text-white rounded-xl p-4 m-3 flex flex-col items-center justify-center">
