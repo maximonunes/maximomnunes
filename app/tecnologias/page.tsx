@@ -1,36 +1,22 @@
-import React from "react";
-import Image from "next/image";
+"use client"
+
 import tecnologias from "@/data/tecnologias.json";
 import TecnologiaCard from "@/components/TecnologiaCard";
-
-
-
-// Define a interface do objeto de tecnologia
-interface Tecnologia {
-  title: string;
-  description: string;
-  image: string;
-  rating: number;
-}
+import Link from "next/link";
 
 export default function TecnologiasPage() {
-  const data = tecnologias;
 
-  return (
-    <section className="flex flex-col items-center gap-8">
-      <h2 className="text-3xl font-semibold">Tecnologias Exploradas</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl">
-        {data.map((tec: Tecnologia, index: number) => (
-          <TecnologiaCard
-            key={index}
-            title={tec.title}
-            image={tec.image}
-            index={index}  
-          />
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <div className="flex flex-wrap gap-4 p-4">
+            {tecnologias.map((tecnologias, index) => (
+                <Link href={`/tecnologias/${index}`} key={index}>
+                    <TecnologiaCard
+                        title={tecnologias.title}
+                        image={tecnologias.image}
+                    />
+                </Link>
+            ))}
+        </div>
+    );
 }
-

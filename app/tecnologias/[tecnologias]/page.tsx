@@ -1,34 +1,23 @@
 "use client"
 
-import Link from "next/link";
-import tecnologias from "@/data/tecnologias.json";
-import TecnologiaDetailsCard from "@/components/TecnologiasDetailsCard";
-import { useParams } from "next/navigation";
+import Link from 'next/link'
+import { useParams } from "next/navigation"
+import tecnologias from '@/data/tecnologias.json'
 
 export default function TecnologiaPage() {
-  const params = useParams()
-  const index = Number(params.tecnologia)
 
-  
+    const params = useParams()
+    const index = Number(params.tecnologia)
 
-  return (
-    <>
-    <div className="flex flex-col justify-center items-center h-screen text-center gap-6 p-6">
-        title={tecnologias[index].title}
-        description={tecnologias[index].description}
-        rating={tecnologias[index].rating}
-        <img 
-        src={tecnologias[index].image}
-        alt={tecnologias[index].title}
-        className="w-[80px] h-auto object-contain"
-      />
-      
+    return (
+        <>
+            <div className="flex flex-col justify-center items-center">
+                <h2>Tecnologia {tecnologias[index].title}</h2>
+                <p>{tecnologias[index].description}</p>
+                <p>{tecnologias[index].rating} ⭐</p>
 
-      <Link
-        href="/tecnologias"
-        className="px-4 py-2 bg-gray-400 hover:bg-gray-500 rounded text-white"
-      >Voltar</Link>
-    </div>
-  </>
-  );
-}
+                <Link href="/tecnologias" className="mt-5">Voltar</Link>
+            </div>
+        </>
+    )
+  }
