@@ -22,8 +22,7 @@ export default function TecnologiaPage() {
   const tecnologia = tecnologias[index];
 
   return (
-    <div className="flex flex-wrap gap-4 p-4 min-h-screen">
-
+    <div className="flex flex-col items-center justify-center min-h-screen p-8">
       <div className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 p-6 rounded-xl w-80 shadow-lg text-center">
 
         
