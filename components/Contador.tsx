@@ -1,80 +1,90 @@
-import { useState, useEffect } from "react";
+'use client'
 
-export default function PaginaContador() {
-  const [count, setCount] = useState(0);
-  const [history, setHistory] = useState<number[]>([]);
+import { useEffect, useState } from "react";
+
+export default function Contador() {
+  const [count, setCount] = useState<number>(0);
+  const [historico, setLista] = useState<number[]>([]);
 
   useEffect(() => {
-    const saved = localStorage.getItem("contador");
-    if (saved) setCount(Number(saved));
+    const salvoCount = localStorage.getItem("count");
+    const salvoHistorico = localStorage.getItem("historico");
 
-    const savedHistory = localStorage.getItem("contadorHistory");
-    if (savedHistory) setHistory(JSON.parse(savedHistory));
+    if (salvoCount) {
+      setCount(Number(salvoCount));
+    }
+
+    if (salvoHistorico) {
+      setLista(JSON.parse(salvoHistorico));
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("contador", count.toString());
-    setHistory((prev) => {
-      const newHist = [...prev, count];
-      localStorage.setItem("contadorHistory", JSON.stringify(newHist));
-      return newHist;
-    });
+    localStorage.setItem("count", `${count}`);
   }, [count]);
 
-  const incrementar = () => setCount((prev) => Math.max(prev + 1, 10));
-  const decrementar = () => setCount((prev) => Math.min(prev - 1, 0));
-  const reset = () => setCount(0);
+  useEffect(() => {
+    localStorage.setItem("historico", JSON.stringify(historico));
+  }, [historico]);
 
-  let color = "";
-  if (count <= 3) {
-    color = "text-red-500";
-  } else if (count <= 7) {
-    color = "text-yellow-500";
-  } else {
-    color = "text-green-500";
-  }
+  useEffect(() => {
+    document.title = `${count}`;
+  }, [count]);
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <div className="bg-white shadow-xl rounded-2xl p-10 max-w-md w-full text-center space-y-6">
-        <h1 className="text-3xl font-bold mb-4">Contador Bonito</h1>
+  const cor =
+    count <= 3
+      ? "text-red-500"
+      : count <= 7
+      ? "text-yellow-400"
+      : "text-green-500";
 
-        <div className="text-7xl font-extrabold transition-all duration-300 ${color}">
-          <span className={color}>{count}</span>
-        </div>
 
-        <div className="flex justify-center gap-4 mt-6">
-          <button
-            onClick={incrementar}
-            className="px-6 py-3 bg-green-500 text-white rounded-2xl shadow hover:bg-green-600 transition"
-          >
-            +
-          </button>
-          <button
-            onClick={decrementar}
-            className="px-6 py-3 bg-red-500 text-white rounded-2xl shadow hover:bg-red-600 transition"
-          >
-            -
-          </button>
-          <button
-            onClick={reset}
-            className="px-6 py-3 bg-gray-500 text-white rounded-2xl shadow hover:bg-gray-600 transition"
-          >
-            Reset
-          </button>
-        </div>
 
-        <div className="mt-6 text-left">
-          <h2 className="font-semibold text-lg mb-2">Histórico:</h2>
-          <ul className="bg-gray-100 rounded-xl p-4 h-40 overflow-auto shadow-inner">
-            {history.map((v, i) => (
-              <li key={i} className="border-b border-gray-300 py-1">
-                {v}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+return (
+  <>
+    <p> Contador: <span className={cor}>{count}</span></p>
+
+    {/* CONTAINER DOS BOTÕES */}
+    <div className="flex flex-col gap-4 my-4">
+      <button
+        className="bg-blue-200 hover:bg-blue-300 active:bg-blue-400 rounded-xl p-2"
+        onClick={() => {
+          const novo = count < 10 ? count + 1 : count;
+          setCount(novo);
+          setLista([...historico, novo]);
+        }}
+      >
+        Incrementar
+      </button>
+
+      <button
+        className="bg-purple-400 hover:bg-purple-500 active:bg-purple-600 rounded-xl p-2"
+        onClick={() => {
+          const novo = count > 0 ? count - 1 : count;
+          setCount(novo);
+          setLista([...historico, novo]);
+        }}
+      >
+        Decrementar
+      </button>
+
+      <button
+        className="bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-xl p-2"
+        onClick={() => {
+          setCount(0);
+          setLista([...historico, 0]);
+        }}
+      >
+        Reset
+      </button>
     </div>
-  );
+
+    <p>Lista de números:</p>
+    <ul>
+      {historico.map((numero, index) => (
+        <li key={index}>{numero}</li>
+      ))}
+    </ul>
+  </>
+);
 }

@@ -38,12 +38,12 @@ export default function RootLayout({
           <Link href="/tecnologias">Tecnologias</Link>
           <Link href = "/projetos">Projetos</Link>
           <Link href = "/contador">Contador</Link>
-          <Link href="/categorias">Categorias</Link>
           <Link href = "/input">Input e tecnologias</Link>
+          <Link href = "/produtos">Loja DEISI</Link>
         </nav>
         </header>
 
-        <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
+        <main className="bg-blue-200 p-8 rounded-2xl w-full max-w-4xl min-h-[70vh]">
           {children}
         </main>
 
@@ -51,6 +51,8 @@ export default function RootLayout({
           <footer>
       <Relogio />
        </footer>
+
+
       </body>   
   </html>
     

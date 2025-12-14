@@ -1,3 +1,4 @@
+'use client'
 import ContadorPorTecnologia from "@/components//ContadorTec";
 
 interface TecnologiaProps {

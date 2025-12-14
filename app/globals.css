@@ -279,3 +279,19 @@ input:focus, textarea:focus, select:focus {
 .p-2 { padding: .5rem; }
 .p-4 { padding: 1rem; }
 .p-8 { padding: 2rem; }
+
+/* =============================
+   WRAPPER GLOBAL DAS PÁGINAS
+============================= */
+
+.page-wrapper {
+  width: min(1200px, 90%);
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+
+  background: rgba(147, 197, 253, 0.35);
+  border-radius: var(--radius);
+
+  min-height: 75vh;
+}
+
