@@ -16,7 +16,7 @@ export default function Carrinho({ carrinho: carrinho, removerCarrinho: removerC
   const total = carrinho.reduce((acc, p) => acc + Number(p.price), 0)
 
   return (
-    <section className="bg-green-100 p-4 rounded-xl mt-6">
+    <section className="bg-green-100 p-4 rounded-xl sticky top-6 h-fit">
       <h2 className="font-bold text-xl mb-4">Carrinho</h2>
       <ul className="mb-4">
         {carrinho.length === 0 ? (
