@@ -26,6 +26,7 @@ export default function ProdutosPage() {
   const [cupao, setCupao] = useState('')
   const [respostaCompra, setRespostaCompra] = useState<string | null>(null)
 
+  
   useEffect(() => {
     if (!data) return
     let resultados = data.filter(p =>

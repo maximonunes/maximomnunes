@@ -1,17 +1,14 @@
-export interface Rating {
-  rate: number;
-  count: number;
+
+
+
+export interface Pais{
+    name:string;
+    language:string;
+    nativeName: string;
+    area: number;
+    pop : number;
 }
 
-export interface Produto {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: Rating;
-}
 
 export interface Rating {
   rate: number;

@@ -1,0 +1,19 @@
+[
+    {
+        "name":{"common":"Antígua e Barbuda",
+        "official":"Antígua e Barbuda",
+        "nativeName":{"eng":{"official":"Antígua e Barbuda","common":"Antígua e Barbuda"}}},
+        "area":442.0,
+        "population":103603
+    },
+        
+        {
+            "name":{"common":"Butão","official":"Reino do Butão Butão",
+            "nativeName":{"dzo":{"official":"འབྲུག་རྒྱལ་ཁབ་","common":"འབྲུག་ཡུལ་"}}},
+            "area":38394.0,"population":784043},
+            {"name":{"common":"Itália","official":"República Italiana",
+            "nativeName":{"ita":{"official":"Repubblica italiana","common":"Itália"}}},
+            "area":301336.0,
+            "population":58927633
+        }
+    ]
